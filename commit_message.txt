@@ -1,0 +1,16 @@
+Ramin Yazdani | ML Model Selection Notebook | main | feat(setup): Initial commit with README
+
+Initialize the ml-model-selection-notebook repository with a basic README file that outlines the project goals and setup instructions.
+
+This is the foundation commit that establishes the repository structure. The README provides:
+- Project title and description
+- Setup instructions for users
+- Basic documentation framework
+- Professional project introduction
+
+This commit represents the first step in building a comprehensive machine learning model selection and evaluation toolkit. Every good repository starts with clear documentation to communicate project purpose and basic usage to potential users, collaborators, and portfolio reviewers.
+
+Files added:
+- README.md - Basic project description with setup instructions
+
+Verification: README file contains clear project description and is ready to be expanded as the project develops.
