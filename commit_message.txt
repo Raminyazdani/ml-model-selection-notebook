@@ -1,16 +1,24 @@
-Ramin Yazdani | ML Model Selection Notebook | main | feat(setup): Initial commit with README
+Ramin Yazdani | ML Model Selection Notebook | main | feat(infra): Add requirements and gitignore
 
-Initialize the ml-model-selection-notebook repository with a basic README file that outlines the project goals and setup instructions.
+Add essential project infrastructure for dependency management and version control hygiene.
 
-This is the foundation commit that establishes the repository structure. The README provides:
-- Project title and description
-- Setup instructions for users
-- Basic documentation framework
-- Professional project introduction
+This commit establishes the development environment foundations:
+- requirements.txt specifies all Python dependencies (numpy, matplotlib, jupyter, scikit-learn)
+- .gitignore excludes Python bytecode, Jupyter checkpoints, IDE files, and OS-specific files
 
-This commit represents the first step in building a comprehensive machine learning model selection and evaluation toolkit. Every good repository starts with clear documentation to communicate project purpose and basic usage to potential users, collaborators, and portfolio reviewers.
+These files are critical for:
+- Reproducibility: Anyone can recreate the exact environment using requirements.txt
+- Clean version control: .gitignore prevents committing unnecessary files
+- Professional practice: Shows understanding of Python project standards
+
+The dependencies chosen cover:
+- numpy: Numerical computing foundation
+- matplotlib: Visualization
+- jupyter: Interactive notebook environment
+- scikit-learn: Machine learning algorithms and utilities
 
 Files added:
-- README.md - Basic project description with setup instructions
+- requirements.txt - Core ML dependencies list
+- .gitignore - Python, Jupyter, IDE, and OS ignore patterns
 
-Verification: README file contains clear project description and is ready to be expanded as the project develops.
+Verification: Tested that requirements.txt installs all necessary packages successfully. Confirmed .gitignore patterns match Python/Jupyter best practices.
