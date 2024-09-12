@@ -1,22 +1,28 @@
-Ramin Yazdani | ML Model Selection Notebook | main | WIP(data): Start notebook with synthetic data generation
+Ramin Yazdani | ML Model Selection Notebook | main | feat(cv): Implement custom K-fold cross-validation
 
-Create the main Jupyter notebook and implement synthetic dataset generation for classification tasks.
+Implement K-fold cross-validation from scratch to demonstrate understanding of fundamental model evaluation concepts.
 
-This commit initializes the analysis notebook with:
-- Project title and overview
-- Import statements for core libraries (numpy, matplotlib, sklearn)
-- Synthetic circular dataset generation using sklearn's make_circles
-- Data visualization with scatter plots
+This commit adds:
+- Custom kfold_cross_validation function with manual data splitting
+- Train/test split logic for K folds
+- Accuracy and F1 score computation
+- Reusable evaluation framework for all subsequent models
 
-The make_circles dataset is chosen because:
-- Creates non-linearly separable data (concentric circles)
-- Perfect for demonstrating when linear models fail
-- Ideal for comparing linear vs. non-linear classifiers
-- Visually clear and easy to understand
+The implementation is educational rather than using sklearn's built-in CV:
+- Shows the algorithm step-by-step
+- Demonstrates understanding of the underlying mechanics
+- Creates indices for train/test splits manually
+- Computes performance metrics explicitly
 
-This establishes the foundation for all subsequent machine learning analysis. Starting with data generation before implementing algorithms follows best practices for ML workflow development.
+Key features of the implementation:
+- Takes any sklearn-compatible model
+- Supports configurable K value
+- Returns mean accuracy and F1 score
+- Properly handles data indexing for each fold
 
-Files added/modified:
-- ml_model_selection_analysis.ipynb - Created with cells 0-6
+This is a critical foundation for all model comparison work that follows. Understanding cross-validation by building it from scratch is more valuable for demonstration purposes than using a black-box library function.
 
-Verification: Notebook runs successfully, generates circular dataset, and produces clear visualization. Dataset has expected shape and distribution for classification demonstrations.
+Files modified:
+- ml_model_selection_analysis.ipynb - Extended to cells 0-9
+
+Verification: Tested the custom CV function with a simple model. Confirmed it produces reasonable results and properly splits data into K folds. All metrics compute correctly.
