@@ -1,29 +1,32 @@
-Ramin Yazdani | ML Model Selection Notebook | main | feat(eval): Evaluate models across different K-fold values
+Ramin Yazdani | ML Model Selection Notebook | main | feat(viz): Add decision boundary visualization for classifiers
 
-Systematically evaluate all three classification models using different K values to analyze performance stability.
+Implement comprehensive decision boundary visualization to show how each model separates classes in 2D space.
 
-This commit implements:
-- K-values evaluation loop testing K = 5, 10, 15, 20, 25, 30
-- Performance metric collection for each model and K combination
-- Results storage in structured format
-- Visualization comparing model performance across K values
-- Analysis of how K affects cross-validation results
+This commit adds:
+- Decision boundary plotting utility function
+- Side-by-side visualizations for Logistic Regression, LDA, and QDA
+- Color-coded decision regions
+- Training data overlay on decision boundaries
+- Analysis comparing linear vs. quadratic boundaries
 
-Key insights demonstrated:
-- Model performance stability across different K values
-- Trade-offs between computational cost and estimate reliability
-- Identification of optimal K value for this dataset
-- Comparison of model robustness
+The visualizations reveal:
+- Logistic Regression: Linear boundary, struggles with circular data
+- LDA: Also linear boundary, similar limitations
+- QDA: Quadratic boundary, perfectly suited for concentric circles
 
-The systematic evaluation shows:
-- QDA typically outperforms linear models on circular data
-- Performance metrics stabilize as K increases
-- Different models show different sensitivity to K value
-- Higher K values generally give more reliable estimates
+Visual insights that metrics alone cannot provide:
+- Why QDA outperforms linear models on this data
+- How decision boundaries relate to data distribution
+- The fundamental difference between linear and quadratic classifiers
+- Where each model makes correct vs. incorrect predictions
 
-This analysis is critical for understanding not just which model performs best, but also how stable and reliable the performance estimates are.
+Decision boundary visualization is crucial for:
+- Understanding model behavior beyond accuracy numbers
+- Explaining why certain models work better for specific data patterns
+- Demonstrating the importance of matching model complexity to data structure
+- Portfolio demonstration of data visualization skills
 
 Files modified:
-- ml_model_selection_analysis.ipynb - Extended to cells 0-14
+- ml_model_selection_analysis.ipynb - Extended to cells 0-21
 
-Verification: All three models evaluated successfully across all K values. Performance plots generated correctly. QDA shows superior performance as expected for circular data. Metrics are consistent and reasonable.
+Verification: Decision boundary plots render correctly for all three models. QDA shows circular boundary matching the data structure. Linear models show straight boundaries as expected. Visualization clearly demonstrates why QDA is superior for this dataset.
