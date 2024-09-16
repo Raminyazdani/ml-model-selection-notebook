@@ -1,21 +1,29 @@
-Ramin Yazdani | ML Model Selection Notebook | main | feat(models): Fix sklearn import path for discriminant analysis
+Ramin Yazdani | ML Model Selection Notebook | main | feat(eval): Evaluate models across different K-fold values
 
-Correct the import error from the previous commit by fixing the module path.
+Systematically evaluate all three classification models using different K values to analyze performance stability.
 
-Bug fixed:
-- Changed: from sklearn.discriminant import ...
-- To: from sklearn.discriminant_analysis import ...
+This commit implements:
+- K-values evaluation loop testing K = 5, 10, 15, 20, 25, 30
+- Performance metric collection for each model and K combination
+- Results storage in structured format
+- Visualization comparing model performance across K values
+- Analysis of how K affects cross-validation results
 
-This was discovered when attempting to run the notebook after the previous commit. Python raised an ImportError stating "No module named 'sklearn.discriminant'". The correct module name is sklearn.discriminant_analysis, not sklearn.discriminant.
+Key insights demonstrated:
+- Model performance stability across different K values
+- Trade-offs between computational cost and estimate reliability
+- Identification of optimal K value for this dataset
+- Comparison of model robustness
 
-This is a realistic mistake that happens when working from memory with sklearn's nested module structure. The discriminant_analysis module contains both LinearDiscriminantAnalysis and QuadraticDiscriminantAnalysis classes, but the module name is easy to misremember.
+The systematic evaluation shows:
+- QDA typically outperforms linear models on circular data
+- Performance metrics stabilize as K increases
+- Different models show different sensitivity to K value
+- Higher K values generally give more reliable estimates
 
-After this fix:
-- All three models (Logistic Regression, LDA, QDA) are properly instantiated
-- Import statements work correctly
-- Models are ready for training and evaluation
+This analysis is critical for understanding not just which model performs best, but also how stable and reliable the performance estimates are.
 
 Files modified:
-- ml_model_selection_analysis.ipynb - Fixed import in cell 11
+- ml_model_selection_analysis.ipynb - Extended to cells 0-14
 
-Verification: Notebook now runs without import errors. All three classifiers can be successfully instantiated and are ready for use in the evaluation pipeline.
+Verification: All three models evaluated successfully across all K values. Performance plots generated correctly. QDA shows superior performance as expected for circular data. Metrics are consistent and reasonable.
