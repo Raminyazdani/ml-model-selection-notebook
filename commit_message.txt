@@ -1,32 +1,35 @@
-Ramin Yazdani | ML Model Selection Notebook | main | feat(viz): Add decision boundary visualization for classifiers
+Ramin Yazdani | ML Model Selection Notebook | main | feat(regression): Add Ridge regression with regularization
 
-Implement comprehensive decision boundary visualization to show how each model separates classes in 2D space.
+Extend the project to regression tasks by implementing Ridge (L2) regression with hyperparameter tuning.
 
-This commit adds:
-- Decision boundary plotting utility function
-- Side-by-side visualizations for Logistic Regression, LDA, and QDA
-- Color-coded decision regions
-- Training data overlay on decision boundaries
-- Analysis comparing linear vs. quadratic boundaries
+This commit introduces:
+- Synthetic regression data generation
+- Ridge regression implementation
+- Lambda (alpha) parameter tuning via cross-validation
+- Mean Squared Error evaluation
+- Regularization path visualization
 
-The visualizations reveal:
-- Logistic Regression: Linear boundary, struggles with circular data
-- LDA: Also linear boundary, similar limitations
-- QDA: Quadratic boundary, perfectly suited for concentric circles
+Ridge regression demonstrates:
+- L2 regularization to prevent overfitting
+- How penalty term shrinks coefficients
+- Impact of hyperparameter (alpha/lambda) on model performance
+- Practical hyperparameter tuning workflow
 
-Visual insights that metrics alone cannot provide:
-- Why QDA outperforms linear models on this data
-- How decision boundaries relate to data distribution
-- The fundamental difference between linear and quadratic classifiers
-- Where each model makes correct vs. incorrect predictions
+The implementation includes:
+- Multiple lambda values tested (0.001, 0.01, 0.1, 1, 10, 100)
+- Cross-validation for model selection
+- Training set evaluation
+- Optimal model identification based on lowest MSE
 
-Decision boundary visualization is crucial for:
-- Understanding model behavior beyond accuracy numbers
-- Explaining why certain models work better for specific data patterns
-- Demonstrating the importance of matching model complexity to data structure
-- Portfolio demonstration of data visualization skills
+L2 regularization (Ridge):
+- Adds penalty proportional to square of coefficients
+- Shrinks coefficients toward zero but never exactly to zero
+- Reduces model complexity and variance
+- Particularly useful when features are correlated
+
+This begins the "Beyond Linearity" section by first showing how to control model complexity through regularization before moving to non-linear techniques.
 
 Files modified:
-- ml_model_selection_analysis.ipynb - Extended to cells 0-21
+- ml_model_selection_analysis.ipynb - Extended to cells 0-24
 
-Verification: Decision boundary plots render correctly for all three models. QDA shows circular boundary matching the data structure. Linear models show straight boundaries as expected. Visualization clearly demonstrates why QDA is superior for this dataset.
+Verification: Ridge regression runs successfully across all lambda values. MSE computed correctly. Optimal lambda identified. Regularization demonstrates expected behavior of increasing training error as lambda increases.
