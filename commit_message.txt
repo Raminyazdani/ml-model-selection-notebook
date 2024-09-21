@@ -1,35 +1,36 @@
-Ramin Yazdani | ML Model Selection Notebook | main | feat(regression): Add Ridge regression with regularization
+Ramin Yazdani | ML Model Selection Notebook | main | feat(regression): Add Lasso regression for feature selection
 
-Extend the project to regression tasks by implementing Ridge (L2) regression with hyperparameter tuning.
+Implement Lasso (L1) regression to complement Ridge and demonstrate feature selection capabilities.
 
-This commit introduces:
-- Synthetic regression data generation
-- Ridge regression implementation
-- Lambda (alpha) parameter tuning via cross-validation
-- Mean Squared Error evaluation
-- Regularization path visualization
+This commit adds:
+- Lasso regression implementation
+- Alpha parameter tuning across multiple values
+- Side-by-side comparison with Ridge regression results
+- Optimal model selection based on validation performance
+- Test set evaluation for final model assessment
 
-Ridge regression demonstrates:
-- L2 regularization to prevent overfitting
-- How penalty term shrinks coefficients
-- Impact of hyperparameter (alpha/lambda) on model performance
-- Practical hyperparameter tuning workflow
+Lasso regression features:
+- L1 regularization with coefficient penalty
+- Sparsity-inducing property (can set coefficients to exactly zero)
+- Automatic feature selection capability
+- Different regularization behavior compared to Ridge
 
-The implementation includes:
-- Multiple lambda values tested (0.001, 0.01, 0.1, 1, 10, 100)
-- Cross-validation for model selection
-- Training set evaluation
-- Optimal model identification based on lowest MSE
+Key differences from Ridge demonstrated:
+- Ridge: Shrinks all coefficients but keeps them non-zero
+- Lasso: Can eliminate features entirely by setting coefficients to zero
+- Lasso: Useful when you suspect many features are irrelevant
+- Ridge: Better when all features contribute somewhat
 
-L2 regularization (Ridge):
-- Adds penalty proportional to square of coefficients
-- Shrinks coefficients toward zero but never exactly to zero
-- Reduces model complexity and variance
-- Particularly useful when features are correlated
+The comparison shows:
+- How different regularization penalties affect model behavior
+- Trade-offs between L1 and L2 regularization
+- Practical considerations for choosing regularization method
+- Impact on test set performance
 
-This begins the "Beyond Linearity" section by first showing how to control model complexity through regularization before moving to non-linear techniques.
+Alpha values tested include: 0.001, 0.01, 0.1, 1, 10, 100
+Best model selected based on lowest MSE and evaluated on held-out test data.
 
 Files modified:
-- ml_model_selection_analysis.ipynb - Extended to cells 0-24
+- ml_model_selection_analysis.ipynb - Extended to cells 0-30
 
-Verification: Ridge regression runs successfully across all lambda values. MSE computed correctly. Optimal lambda identified. Regularization demonstrates expected behavior of increasing training error as lambda increases.
+Verification: Lasso regression implemented successfully. Optimal alpha identified through cross-validation. Test set MSE computed correctly. Comparison with Ridge shows expected differences in regularization behavior.
