@@ -1,36 +1,40 @@
-Ramin Yazdani | ML Model Selection Notebook | main | feat(regression): Add Lasso regression for feature selection
+Ramin Yazdani | ML Model Selection Notebook | main | feat(nonlinear): Implement polynomial regression for non-linear patterns
 
-Implement Lasso (L1) regression to complement Ridge and demonstrate feature selection capabilities.
+Move beyond linear models by implementing polynomial regression with various degrees to capture non-linear relationships.
 
-This commit adds:
-- Lasso regression implementation
-- Alpha parameter tuning across multiple values
-- Side-by-side comparison with Ridge regression results
-- Optimal model selection based on validation performance
-- Test set evaluation for final model assessment
+This commit introduces:
+- Polynomial feature transformation using sklearn's PolynomialFeatures
+- Polynomial regression with degrees 2, 4, 5, and 6
+- Visual comparison of different polynomial fits
+- Analysis of overfitting vs. underfitting trade-offs
 
-Lasso regression features:
-- L1 regularization with coefficient penalty
-- Sparsity-inducing property (can set coefficients to exactly zero)
-- Automatic feature selection capability
-- Different regularization behavior compared to Ridge
+Polynomial regression extends linear regression by:
+- Creating polynomial combinations of features
+- Allowing non-linear relationships to be modeled
+- Maintaining linear regression's computational efficiency
+- Demonstrating the bias-variance trade-off
 
-Key differences from Ridge demonstrated:
-- Ridge: Shrinks all coefficients but keeps them non-zero
-- Lasso: Can eliminate features entirely by setting coefficients to zero
-- Lasso: Useful when you suspect many features are irrelevant
-- Ridge: Better when all features contribute somewhat
+Degrees explored:
+- Degree 2: Quadratic terms, moderate flexibility
+- Degree 4: Higher-order terms, more complex curves
+- Degree 5: Even more flexibility, risk of overfitting
+- Degree 6: Very flexible, high overfitting risk on training data
 
-The comparison shows:
-- How different regularization penalties affect model behavior
-- Trade-offs between L1 and L2 regularization
-- Practical considerations for choosing regularization method
-- Impact on test set performance
+Key demonstrations:
+- Underfitting: Lower degrees may miss data patterns
+- Good fit: Moderate degrees capture true relationships
+- Overfitting: Higher degrees fit noise in training data
+- Model complexity trade-offs in practice
 
-Alpha values tested include: 0.001, 0.01, 0.1, 1, 10, 100
-Best model selected based on lowest MSE and evaluated on held-out test data.
+The visualizations clearly show:
+- How increasing polynomial degree affects fit quality
+- When additional complexity helps vs. hurts
+- Visual evidence of the bias-variance trade-off
+- Why model selection matters for non-linear data
+
+This is the first true "beyond linearity" technique, preparing for more sophisticated non-linear methods like splines.
 
 Files modified:
-- ml_model_selection_analysis.ipynb - Extended to cells 0-30
+- ml_model_selection_analysis.ipynb - Extended to cells 0-32
 
-Verification: Lasso regression implemented successfully. Optimal alpha identified through cross-validation. Test set MSE computed correctly. Comparison with Ridge shows expected differences in regularization behavior.
+Verification: Polynomial regression successfully implemented for all degrees. Visualizations clearly show progression from underfitting to overfitting. Model fits are reasonable and demonstrate the intended concepts.
