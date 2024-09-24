@@ -1,40 +1,39 @@
-Ramin Yazdani | ML Model Selection Notebook | main | feat(nonlinear): Implement polynomial regression for non-linear patterns
+Ramin Yazdani | ML Model Selection Notebook | main | feat(nonlinear): Add spline regression and assignment reference
 
-Move beyond linear models by implementing polynomial regression with various degrees to capture non-linear relationships.
+Complete the non-linear techniques section with spline regression and include the original assignment for reference.
 
-This commit introduces:
-- Polynomial feature transformation using sklearn's PolynomialFeatures
-- Polynomial regression with degrees 2, 4, 5, and 6
-- Visual comparison of different polynomial fits
-- Analysis of overfitting vs. underfitting trade-offs
+This commit adds:
+- Spline transformer implementation using sklearn's SplineTransformer
+- B-spline regression with varying numbers of knots (2, 3, 4, 10)
+- Varying spline degrees (2, 3, 10)
+- Complex model exploration demonstrating flexible non-linear modeling
+- Original assignment notebook (assignment_3_handout.ipynb) for context
 
-Polynomial regression extends linear regression by:
-- Creating polynomial combinations of features
-- Allowing non-linear relationships to be modeled
-- Maintaining linear regression's computational efficiency
-- Demonstrating the bias-variance trade-off
+Spline regression advantages:
+- More flexible than polynomial regression
+- Local control via knots (changes in one region don't affect others)
+- Avoids high-degree polynomial instability
+- Smooth continuous functions
+- Better extrapolation behavior
 
-Degrees explored:
-- Degree 2: Quadratic terms, moderate flexibility
-- Degree 4: Higher-order terms, more complex curves
-- Degree 5: Even more flexibility, risk of overfitting
-- Degree 6: Very flexible, high overfitting risk on training data
+Configuration space explored:
+- Knots: Control number of piecewise regions (2, 3, 4, 10)
+- Degree: Control smoothness of splines (2=quadratic, 3=cubic, 10=very smooth)
+- Shows how different configurations affect fit
 
-Key demonstrations:
-- Underfitting: Lower degrees may miss data patterns
-- Good fit: Moderate degrees capture true relationships
-- Overfitting: Higher degrees fit noise in training data
-- Model complexity trade-offs in practice
+Why include original assignment:
+- Maintains transparency about educational origins
+- Provides context for portfolio reviewers
+- Shows progression from course work to polished project
+- Demonstrates ability to transform educational work into professional portfolio pieces
 
-The visualizations clearly show:
-- How increasing polynomial degree affects fit quality
-- When additional complexity helps vs. hurts
-- Visual evidence of the bias-variance trade-off
-- Why model selection matters for non-linear data
+This completes the core technical content:
+- Part 1: Generalization (K-fold CV)
+- Part 2: Model Selection (Classification models)
+- Part 3: Beyond Linearity (Ridge, Lasso, Polynomial, Splines)
 
-This is the first true "beyond linearity" technique, preparing for more sophisticated non-linear methods like splines.
+Files modified/added:
+- ml_model_selection_analysis.ipynb - Extended to cells 0-36 (complete analysis)
+- assignment_3_handout.ipynb - Original assignment file added
 
-Files modified:
-- ml_model_selection_analysis.ipynb - Extended to cells 0-32
-
-Verification: Polynomial regression successfully implemented for all degrees. Visualizations clearly show progression from underfitting to overfitting. Model fits are reasonable and demonstrate the intended concepts.
+Verification: Spline regression implemented successfully with all knot and degree configurations. Visualizations show expected flexible non-linear fits. Original assignment preserved correctly for reference.
