@@ -1,1 +1,20 @@
 FILE	LOCATOR	BEFORE_SNIPPET	AFTER_SNIPPET	NOTES
+README.md	line 1	Machine Learning Analysis Study	ML Model Selection & Evaluation Toolkit	Updated title to professional name
+README.md	line 33	Submission_14_-_7068679_Ramin_Yazdani/	ml-model-selection-notebook/	Updated folder structure
+README.md	line 56	cd Submission_14_-_7068679_Ramin_Yazdani	cd ml-model-selection-notebook	Removed submission folder reference
+README.md	entire file	Basic documentation	Portfolio-grade with 13 sections	Complete README rewrite
+ml_model_selection_analysis.ipynb	cell[7] (markdown)	Task 1...Lecture 6	[Removed]	Cleaned K-fold CV section
+ml_model_selection_analysis.ipynb	cell[9] (code)	#TODO comments	[Removed]	Cleaned TODO from function
+ml_model_selection_analysis.ipynb	cell[10] (markdown)	Task 2	[Removed]	Cleaned Model Fitting section
+ml_model_selection_analysis.ipynb	cell[11] (code)	#TODO	[Removed]	Cleaned model instantiation
+ml_model_selection_analysis.ipynb	cell[12] (markdown)	Task 2.1	[Removed]	Cleaned K values section
+ml_model_selection_analysis.ipynb	cell[13] (code)	#TODO	[Removed]	Cleaned CV loop
+ml_model_selection_analysis.ipynb	cell[15] (markdown)	Task 3	[Removed]	Cleaned decision boundary section
+ml_model_selection_analysis.ipynb	cell[22] (markdown)	Task 4	[Removed]	Cleaned Ridge/Lasso section
+ml_model_selection_analysis.ipynb	cell[24] (code)	#TODO	[Removed]	Cleaned imports
+ml_model_selection_analysis.ipynb	cell[25] (markdown)	Task 5	[Removed]	Cleaned model selection section
+ml_model_selection_analysis.ipynb	cell[27] (code)	#TODO	[Removed]	Cleaned fitting code
+ml_model_selection_analysis.ipynb	cell[31] (markdown)	Task 6	[Removed]	Cleaned polynomial section
+ml_model_selection_analysis.ipynb	cell[32] (code)	#TODO	[Removed]	Cleaned polynomial code
+ml_model_selection_analysis.ipynb	cell[33] (markdown)	Task 7	[Removed]	Cleaned spline section
+ml_model_selection_analysis.ipynb	cell[34] (code)	#TODO	[Removed]	Cleaned spline code
