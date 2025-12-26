@@ -105,3 +105,62 @@ All findings have been logged to suggestion.txt with:
 - RATIONALE
 - STATUS (all marked NOT_APPLIED initially)
 
+
+## Phase 3: Portfolio-Readiness Changes
+
+### 3.1 README.md Updates ✓
+**Changes Applied:**
+- Replaced title "Machine Learning Analysis Study" → "ML Model Selection & Evaluation Toolkit"
+- Removed all references to `Submission_14_-_7068679_Ramin_Yazdani/` folder (lines 33, 56)
+- Updated folder structure to show actual repository structure
+- Enhanced README with detailed sections:
+  - Professional problem statement and approach
+  - Key features and techniques covered
+  - Comprehensive setup instructions
+  - Data inputs/outputs documentation
+  - Troubleshooting section
+  - Project background section explaining educational origin
+- Aligned all content with project_identity.md
+
+**Verification:** README is now portfolio-grade and contains no assignment traces.
+
+### 3.2 Notebook Cleaning: ml_model_selection_analysis.ipynb ✓
+**Changes Applied - 15 cells cleaned:**
+
+**Markdown cells (7 cells):**
+- Cell 7: Removed "Task 1" heading and "Lecture 6" reference from K-fold CV section
+- Cell 10: Removed "Task 2" heading from Model Fitting section
+- Cell 12: Removed "Task 2.1" heading and assignment question from K values evaluation
+- Cell 15: Removed "Task 3" heading from decision boundary analysis
+- Cell 22: Removed "Task 4" heading from Ridge/Lasso section
+- Cell 25: Removed "Task 5" heading from model selection question
+- Cell 31: Removed "Task 6" heading from polynomial regression section
+- Cell 33: Removed "Task 7" heading from spline regression section
+
+**Code cells (8 cells):**
+- Cell 9: Removed TODO comments from kfold_cross_validation function
+- Cell 11: Removed TODO comments from model instantiation
+- Cell 13: Removed TODO comments from cross-validation loop
+- Cell 24: Removed TODO comments from Ridge/Lasso imports
+- Cell 27: Removed TODO comments from Ridge/Lasso fitting
+- Cell 32: Removed TODO comments from polynomial features
+- Cell 34: Removed TODO comments from spline transformer
+
+**Content Preservation:**
+- All analysis text, explanations, and conclusions preserved
+- All code implementations preserved intact
+- All visualizations and outputs unchanged
+- Overall notebook structure and flow maintained
+
+**Verification:** Notebook now reads as a professional portfolio piece demonstrating ML techniques, with no assignment language.
+
+### 3.3 Files NOT Modified (Intentional)
+- `assignment_3_handout.ipynb` - Preserved as original reference version
+- `requirements.txt` - Already appropriate
+- No file renames needed - all names already professional
+
+### 3.4 Ledger Updates ✓
+- All 23 discovered issues logged in suggestion.txt
+- All 19 applied changes logged in suggestions_done.txt with before/after snippets
+- All suggestion.txt entries marked as APPLIED (for those fixed) or NOT_APPLIED (for assignment_3_handout.ipynb, intentionally preserved)
+
