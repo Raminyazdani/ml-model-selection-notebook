@@ -18,3 +18,6 @@ ml_model_selection_analysis.ipynb	cell[31] (markdown)	Task 6	[Removed]	Cleaned p
 ml_model_selection_analysis.ipynb	cell[32] (code)	#TODO	[Removed]	Cleaned polynomial code
 ml_model_selection_analysis.ipynb	cell[33] (markdown)	Task 7	[Removed]	Cleaned spline section
 ml_model_selection_analysis.ipynb	cell[34] (code)	#TODO	[Removed]	Cleaned spline code
+.gitignore	root directory	[file missing]	# Python\n__pycache__/\n*.py[cod]\n.Python\nenv/\nvenv/\n\n# Jupyter\n.ipynb_checkpoints/\n\n# IDE\n.vscode/\n.idea/\n\n# OS\n.DS_Store	Created .gitignore to match step_08
+history/github_steps.md	entire file	8-step version (269 lines)	13-step version with expansion note (600+ lines)	Regenerated with 1.625× multiplier and oops/hotfix
+history/steps/	step directories	step_01 through step_08	step_01 through step_13	Expanded historian from 8 to 13 steps using split and oops/hotfix strategies

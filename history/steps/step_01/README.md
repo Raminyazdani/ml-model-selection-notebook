@@ -1,17 +1,16 @@
-# ML Model Selection Notebook
+# Machine Learning Model Selection
 
-A machine learning project exploring model selection and evaluation techniques.
+A Jupyter notebook project for exploring machine learning model selection techniques.
 
 ## Setup
 
+Install dependencies:
 ```bash
-pip install -r requirements.txt
+pip install numpy matplotlib jupyter scikit-learn
 ```
 
-## Stack
+## Run
 
-- Python 3.x
-- Jupyter Notebook
-- scikit-learn
-- NumPy
-- Matplotlib
+```bash
+jupyter notebook
+```
