@@ -22,3 +22,4 @@ TRACE	ml_model_selection_analysis.ipynb	cell[33] (markdown)	### Exploring Degree
 TRACE	ml_model_selection_analysis.ipynb	cell[34] (code)	from sklearn.preprocessing import SplineTransformer from sklearn.pipeline import make_pipeline  plt.	Remove TODO comment	Assignment trace - TODO placeholder	APPLIED
 PATH	README.md	line 33	Submission_14_-_7068679_Ramin_Yazdani/	Remove or update to current directory structure	References non-existent submission folder	APPLIED
 PATH	README.md	line 56	cd Submission_14_-_7068679_Ramin_Yazdani	Remove or update to current directory structure	References non-existent submission folder	APPLIED
+GAP	.gitignore	root directory	[file missing]	Create .gitignore with Python/Jupyter/IDE/OS patterns	Missing from root but exists in historian step_08	APPLIED
